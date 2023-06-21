@@ -1,112 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-
-    <!-- box icons-->
-    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css" rel='stylesheet'>
-
-
-    <!-- css-->
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HosBook</title>
 </head>
+  <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', verdana
+}
+
+:root{
+    --bg--color: #F5F5F5;
+    --second-bg-color:#FFFFFF;
+    --text-color: #333333;
+    --main-color: #0073E6 ;
+    
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+    color: var(--text-color);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-right: 1.6rem;
+}
+
+.nav-links a {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin-left: 1.9rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--main-color);
+}
+
+.menu-icon-active .navbar {
+    display: block;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.6rem 9%;
+    background: var(--bg--color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.home-content h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+
+#menu-icon{
+    font-size: 3.6 rem;
+    color: var(--text-color);
+    display: none;
+}
+
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 550;
+    cursor: default;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: auto;
+}
+
+span{
+    color: var(--main-color);
+}
+
+.home-content h1{
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content p{
+    font-size: 1.6rem;
+}
+
+.about{
+    display: flex;
+    justify-content: auto;
+    align-items: auto;
+    gap: 2rem;
+    background: var(--second-bg-color);
+}
+
+.heading{
+    text-align: center;
+    font-size: 3.7rem;
+}
+
+.team{
+    display: flex;
+    justify-content: auto;
+    align-items: auto;
+    gap: 2rem;
+    background: var(--second-bg-color);
+}
+
+.heading{
+    text-align: center;
+    font-size: 3.7rem;
+}
+
+.team h2{
+    margin-bottom: 5rem;
+}
+
+.team-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.9rem;
+}
+
+.team-container .team-box {
+    flex: 1 1 30rem;
+    background: var(--second-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg--color);
+    transition: .5s ease;
+}
+
+.team-container .team-box{
+    border-color: var(--main-color);
+    transform: scale(1.02);
+}
+
+.team-box i{
+    font-size: 7rem;
+    color: var(--main-color);
+}
+
+ .team-box h3{
+    font-size: 2.5rem;
+ }
+
+ .team-box p{
+    font-size: 1.0rem;
+    margin: .7rem 0 1.7rem;
+ }
+
+
+</style>
 
 <body>
 
     <!-- header design -->
-     <header class="header">
-        <a href="#" class="logo">Portfolio</a>
+    <header class="header">
+      <a href="#" class="logo">Hospital</a>
+      <nav class="navbar">
+          <ul class="nav-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#team">Team</a></li>
+              <li><a href="#contact">Contact</a></li>
+          </ul>
+      </nav>
+  </header>
 
-        <i class='bx bx-menu' id="menu"></i>
+   <!-- home section-->
+   <section class="home" id="home">
+    <div class="home-content">
+        
+        
+        <h3>Welcome to<span> HosBook</span></h3>
+        <p>
+            imma makin vmro*
+        </p>
 
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-
-        </nav>
-
-     </header>
-
-     <!-- home section-->
-    <section class="home" id="home">
-        <div class="home-content">
-            <h3>Hello, I'm </h3>
-            <h1>Chinmay Parite</h1>
-            <h3>And I'm an <span>AI & ML specialist</span></h3>
-            <p>
-                I have a strong interest in AI and ML. While I'm still in the learning phase and don't have much practical experience in this field, I'm eager to dive in and explore everything that AI and ML have to offer. 
-                I'm fascinated by the potential of these technologies to transform industries and solve some of the world's biggest challenges. 
-            </p>
-            <div class="social-media">
-                <a href="#"><i class='bx bxl-linkedin' ></i></a>
-                <a href="#"><i class='bx bxl-youtube' ></i></a>
-                <a href="#"><i class='bx bxl-instagram-alt'></i></a>
-                
-            </div>
-            <a href="#" class="btn">Download CV</a>
-        </div>
-
-        <div class="home-img">
-            <img src="arkham.jpg" alt="">
-        </div>
     </section>
-
+    
     <!-- about section -->
     <section class="about" id="about">
 
-        <div class="about-img">
-            <img src="arkham.jpg" alt="">
-        </div>
+      <div class="about-content">
+          <h2 class="heading"> About<span> Us</span></h2>
+          
+            <p>
+                  lul
+            </p>
+                       
+      </div>
+  </section>
 
-        <div class="about-content">
-            <h2 class="heading"> About<span> Me</span></h2>
-            <h3> AI & ML specialist</h3>
+  <!-- team section-->
+  <section class="team" id="team">
+      <h2 class="heading"> Our<span> Team</span></h2>
+      
+      <div class="team-container">
+        <div class="team-box">
+                <h3>Fusion 360</h3>
                 <p>
-                    I'm currently pursuing a BTech Degree, I'm excited to gain hands-on experience with developing algorithms, working with datasets, and creating intelligent systems.
-                    Through my studies, I hope to gain a deep understanding of the underlying principles of these technologies and apply them to create innovative solutions that can benefit humanity.
+                Designed the infamous Ironman's Arc reactor as one of my project in fusion 360
                 </p>
-               <a href="#" class="btn">Read More</a> 
+                
+        </div>
+
+        <div class="team-box">
+           
+            <h3>Bio-Fabric</h3>
+            <p>
+            Made a bio-fabric as a project in first year of my B.Tech engineering
+            in chemistry lab
+            </p>
             
-        </div>
+         </div>
+
+         <div class="team-box">
+           
+          <h3>Bio-Fabric</h3>
+          <p>
+          Made a bio-fabric as a project in first year of my B.Tech engineering
+          in chemistry lab
+          </p>
+          
+       </div>
+
+       <div class="team-box">
+           
+        <h3>Bio-Fabric</h3>
+        <p>
+        Made a bio-fabric as a project in first year of my B.Tech engineering
+        in chemistry lab
+        </p>
+         
+         
+    
+    </div>
+  </section>
+
+    <!-- contact section design-->
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact<span> Us!</span></h2>
+    
     </section>
 
-    <!-- projects section design-->
-    <section class="projects" id="projects">
-        <h2 class="heading">My <span>Projects</span></h2>
-
-        <div class="projects-container">
-            <div class="projects-box">
-                    <h3>Fusion 360</h3>
-                    <i class='bx bx-shape-triangle'></i>
-                    <p>
-                        Designed the infamous Ironman's Arc reactor as one of my project in fusion 360
-                    </p>
-                    <a href="#" class="btn">Read More</a> 
-            </div>
-        </div>
-
-        <div class="projects-container">
-            <div class="projects-box">
-                    <h3>Bio-Fabric</h3>
-                    <i class='bx bx-closet'></i>
-                    <p>
-                        Made a bio-fabric in chemistry lab in college
-                    </p>
-                    <a href="#" class="btn">Read More</a> 
-            </div>
-        </div>
-    </section>
-
-
-     <!-- custom js -->
-     <script src="js/script.js"></script>
 </body>
-
 </html>
